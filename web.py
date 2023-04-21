@@ -23,5 +23,6 @@ for index, todo in enumerate(todos):
         del st.session_state[todo]
         st.experimental_rerun()
 
-st.text_input(label="", placeholder="Enregistrer une nouvelle tâche ...",
+st.text_input(label="Saisir la tâche", placeholder="Enregistrer une nouvelle tâche ...",
+              label_visibility='hidden',
               on_change=add_todo, key='new_todo')
